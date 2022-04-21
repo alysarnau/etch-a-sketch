@@ -1,7 +1,6 @@
-const body = document.querySelector('body');
+const container = document.querySelector(".container");
 
 const div1 = document.createElement('div');
-body.appendChild(div1);
+container.appendChild(div1);
 div1.setAttribute('class','div');
 
-div1.cloneNode(true);
