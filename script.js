@@ -31,6 +31,7 @@ reset.addEventListener('click', function(e) {
     newGrid = prompt("How big would you like your sketch grid to be on each side? (1-100)");
     makeRows(newGrid,newGrid);
       });
+// need to figure out how to update Grid properly!!!
 
 
 

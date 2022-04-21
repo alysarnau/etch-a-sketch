@@ -5,8 +5,8 @@
   
   #container {
     border: 10px solid red;
-    width: 800px;
-    height: 800px;
+    width: 900px;
+    height: 900px;
 
     display: grid;
     grid-gap: 0px;
