@@ -20,5 +20,9 @@ gridItems.forEach(gridItem => gridItem.addEventListener('mouseover', function(e)
 }));
 
 //make button event to reset the grid
+const reset = document.querySelector("#reset");
+reset.addEventListener('click', function(e) {
+    gridItems.forEach(gridItem => gridItem.classList.remove('hover'));
+      });
 
 //make input area
