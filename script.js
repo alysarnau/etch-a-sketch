@@ -1,14 +1,13 @@
-const container = document.querySelector(".container");
+const container = document.querySelector("#container");
 // create divs
-let n=16; //take grid column value as you want
-
-for(var i = 0; i < n; i++) {
-    container.innerHTML+='<div class="row">';
-    for(j = 0; j < n; j++) {
-        container.innerHTML+='<div class="gridsquare">' + (i*5+j+1) + '</div>';
-    }
-    container.innerHTML+='</div>';
-}
-
-const gridsquare = document.querySelectorAll('.gridsquare');
-// gridsquare.textContent("grid");
+function makeRows(rows, cols) {
+    container.style.setProperty('--grid-rows', rows);
+    container.style.setProperty('--grid-cols', cols);
+    for (c = 0; c < (rows * cols); c++) {
+      let cell = document.createElement("div");
+      cell.innerText = ("square");
+      container.appendChild(cell).className = "grid-item";
+    };
+  };
+  
+makeRows(16, 16);

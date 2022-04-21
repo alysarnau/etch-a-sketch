@@ -1,15 +1,24 @@
-.container {
-  color: aliceblue;
-  width: 800px;
-  height: 800px;
-  display: flex;
-  flex-wrap: wrap;
-}
+:root {
+    --grid-cols: 1;
+    --grid-rows: 1;
+  }
+  
+  #container {
+    border: 10px solid red;
+    width: 800px;
+    height: 800px;
 
-.gridsquare {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+  }
+  
+  .grid-item {
+    box-sizing:border-box;
+    padding: 0px;
+    border: 1px solid #ddd;
+    text-align: center;
     width: 50px;
     height: 50px;
-    flex: auto;
-    border: 2px black;
-}
-
+  }
