@@ -10,7 +10,11 @@ function makeRows(rows, cols) {
     };
   };
   
-makeRows(16, 16);
+
+
+//make var to store prompt from below
+let newGrid = 16;
+makeRows(newGrid, newGrid);
 
 // on mouse hover, add class "hovered" that changes bg
 const gridItems = document.querySelectorAll(".grid-item");
@@ -24,7 +28,9 @@ const reset = document.querySelector("#reset");
 reset.addEventListener('click', function(e) {
     gridItems.forEach(gridItem => gridItem.classList.remove('hover'));
 //make input prompt
-    prompt("How big would you like your sketch grid to be on each side?","");
+    newGrid = prompt("How big would you like your sketch grid to be on each side? (1-100)");
+    makeRows(newGrid,newGrid);
       });
+
 
 
