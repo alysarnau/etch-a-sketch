@@ -23,6 +23,8 @@ gridItems.forEach(gridItem => gridItem.addEventListener('mouseover', function(e)
 const reset = document.querySelector("#reset");
 reset.addEventListener('click', function(e) {
     gridItems.forEach(gridItem => gridItem.classList.remove('hover'));
+//make input prompt
+    prompt("How big would you like your sketch grid to be on each side?","");
       });
 
-//make input area
+
