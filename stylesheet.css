@@ -1,4 +1,15 @@
 .container {
   color: aliceblue;
+  width: 800px;
+  height: 800px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gridsquare {
+    width: 50px;
+    height: 50px;
+    flex: auto;
+    border: 2px black;
 }
 
