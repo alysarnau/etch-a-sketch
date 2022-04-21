@@ -11,3 +11,11 @@ function makeRows(rows, cols) {
   };
   
 makeRows(16, 16);
+
+// on mouse hover, add class "hovered" that changes bg
+
+//mouse exit event delayed color change
+
+//make button event to reset the grid
+
+//make input area
