@@ -27,16 +27,17 @@ const reset = document.querySelector("#reset");
 reset.addEventListener('click', function(e) {
     gridItems.forEach(gridItem => gridItem.classList.remove('hover'));
 //make input prompt
-    newGrid = prompt("How big would you like your sketch grid to be on each side? (1-100)");
-    if ((newGrid >= 1) && (newGrid <=100)) {
-      console.log("Good job!")
-    } else {
-      console.log("Bad!!")
-    };
+    do {
+      newGrid = parseInt(prompt("How big would you like your sketch grid to be on each side? (1-100)",""));
+    } while
+      (isNaN(newGrid) || newGrid > 100 || newGrid < 1);
+
 //SET UP LIMIT OF
     makeRows(newGrid,newGrid);
+  });
 
 // need to figure out how to update Grid properly!!!
+// 2 and 1 don't work as inputs
 
 //random color func
 const randomColor = "#"+((1<<24)*Math.random()|0).toString(16); 
