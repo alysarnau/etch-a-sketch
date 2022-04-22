@@ -35,11 +35,7 @@ reset.addEventListener('click', function(e) {
     };
 //SET UP LIMIT OF
     makeRows(newGrid,newGrid);
-// Need to figure out how to add 
-    gridItems.forEach(gridItem => gridItem.addEventListener('mouseover', function(e) {
-      gridItem.classList.add('hover')
-    }));
-      });
+
 // need to figure out how to update Grid properly!!!
 
 //random color func
