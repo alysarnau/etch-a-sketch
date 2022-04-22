@@ -1,5 +1,5 @@
 const container = document.querySelector("#container");
-// create divs
+// create divs and assign event listener
 function makeRows(rows, cols) {
     container.style.setProperty('--grid-rows', rows);
     container.style.setProperty('--grid-cols', cols);
@@ -11,8 +11,16 @@ function makeRows(rows, cols) {
     const gridItems = document.querySelectorAll(".grid-item");
     gridItems.forEach(gridItem => gridItem.addEventListener('mouseover', function(e) {
       gridItem.classList.add('hover');
-    })
-    )};  
+      // start here
+      // if moused over, add hover class
+      // if moused over again, 
+      }
+    ))}
+
+// random color loop for mouseover
+
+
+
 
 //make var to store prompt from below
 let defaultGrid = 16;
@@ -25,19 +33,15 @@ const gridItems = document.querySelectorAll(".grid-item");
 //make button event to reset the grid
 const reset = document.querySelector("#reset");
 reset.addEventListener('click', function(e) {
-    gridItems.forEach(gridItem => gridItem.classList.remove('hover'));
-//make input prompt
+//make input prompt with range
     do {
       newGrid = parseInt(prompt("How big would you like your sketch grid to be on each side? (1-100)",""));
     } while
       (isNaN(newGrid) || newGrid > 100 || newGrid < 1);
-
-//SET UP LIMIT OF
+    // remove old grid
+    container.innerHTML = '';
     makeRows(newGrid,newGrid);
   });
-
-// need to figure out how to update Grid properly!!!
-// 2 and 1 don't work as inputs
 
 //random color func
 const randomColor = "#"+((1<<24)*Math.random()|0).toString(16); 

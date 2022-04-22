@@ -15,14 +15,14 @@
   }
   
   .grid-item {
-    box-sizing:border-box;
     padding: 0px;
     border: 1px solid #ddd;
-    text-align: center;
 }
 
   .hover {
     background-color: var(--main-bg-color);
   }
+
+
 
 
