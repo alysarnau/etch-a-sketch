@@ -6,6 +6,8 @@ function randomColor() {
   return ("rgb(" + Math.floor(Math.random() *256) + ", " + Math.floor(Math.random() *256) + ", " + Math.floor(Math.random() *256) + ")"); 
 };
 
+
+
 // create divs and assign event listener
 function makeRows(rows, cols) {
     container.style.setProperty('--grid-rows', rows);
@@ -19,10 +21,8 @@ function makeRows(rows, cols) {
     // adds mouseover function
     gridItems.forEach(gridItem => gridItem.addEventListener('mouseover', function(e) {
       gridItem.classList.add('hover');
-      // start here
+ // MULTICOLOR OPTION
       gridItem.style.background = randomColor();
-      // if moused over, do function to add .1 to opacity
-      gridItem.style.opacity = "0.5";
       }
      )
     )
@@ -53,6 +53,3 @@ reset.addEventListener('click', function(e) {
 
 document.documentElement.style.setProperty('--main-bg-color', randomColor);
 
-// set up functionality so each pass thru with mouse changes it to diff rgb value
-// should be able to do this to set up mouseOver as a function each time?
-// and have the function run each time it's moused over - will need to change .hover
