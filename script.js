@@ -1,4 +1,11 @@
 const container = document.querySelector("#container");
+
+// random color
+// let randomColor = Math.floor(Math.random()*16777215).toString(16);
+function randomColor() {
+  return ("rgb(" + Math.floor(Math.random() *256) + ", " + Math.floor(Math.random() *256) + ", " + Math.floor(Math.random() *256) + ")"); 
+};
+
 // create divs and assign event listener
 function makeRows(rows, cols) {
     container.style.setProperty('--grid-rows', rows);
@@ -9,18 +16,19 @@ function makeRows(rows, cols) {
       container.appendChild(cell).className = "grid-item";
     };
     const gridItems = document.querySelectorAll(".grid-item");
+    // adds mouseover function
     gridItems.forEach(gridItem => gridItem.addEventListener('mouseover', function(e) {
       gridItem.classList.add('hover');
       // start here
-      // if moused over, add hover class
-      // if moused over again, 
+      gridItem.style.background = randomColor();
+      // if moused over, do function to add .1 to opacity
+      gridItem.style.opacity = "0.5";
       }
-    ))}
+     )
+    )
+  };
 
-// random color loop for mouseover
-
-
-
+const gridItem = document.querySelector(".grid-item");
 
 //make var to store prompt from below
 let defaultGrid = 16;
@@ -42,9 +50,6 @@ reset.addEventListener('click', function(e) {
     container.innerHTML = '';
     makeRows(newGrid,newGrid);
   });
-
-//random color func
-const randomColor = "#"+((1<<24)*Math.random()|0).toString(16); 
 
 document.documentElement.style.setProperty('--main-bg-color', randomColor);
 
