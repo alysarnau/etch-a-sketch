@@ -33,5 +33,7 @@ reset.addEventListener('click', function(e) {
       });
 // need to figure out how to update Grid properly!!!
 
+//random color func
+const randomColor = "#"+((1<<24)*Math.random()|0).toString(16); 
 
-
+document.documentElement.style.setProperty('--main-bg-color', randomColor);
